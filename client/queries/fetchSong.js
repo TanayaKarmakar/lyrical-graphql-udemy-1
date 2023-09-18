@@ -4,7 +4,11 @@ export default gql `
     query getSongById($id: ID!) {
         song(id: $id) {
             id,
-            title
+            title,
+            lyrics {
+                id,
+                content
+            }
         }
     }
 `;
